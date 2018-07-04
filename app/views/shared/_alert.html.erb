@@ -1,0 +1,11 @@
+<% flash.each do |name, msg| %>
+  <div id="flash_<%= name %>" role="alert" class="alert slide-in-down flash-alert">
+    <div class="alert-body">
+      <% if name == 'notice' %>
+        <%= msg %>
+      <% else %>
+        <strong><%= msg %></strong>
+      <% end %>
+    </div>
+  </div>
+<% end %>

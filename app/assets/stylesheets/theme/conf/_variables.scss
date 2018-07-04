@@ -18,7 +18,8 @@ $brand-warning2:        #ff9800 !default;
 $brand-danger2:         #ef5350 !default;
 $brand-info2:           #55acee !default;
 
-$body-bg:               #F7F7F7 !default;
+$body-bg:               #EAEAEA!default;
+// $body-bg:               #F7F7F7 !default;
 $text-color:            #272B30 !default;
 $body-color:            $text-color !default;
 
@@ -34,3 +35,19 @@ $sb-bg-active:         #1e282c;
 $sb-body-bg:           #2c3b41;
 $sb-body-color:        #8aa4af;
 $sb-body-active:       #fafafa;
+
+$primary-color: $brand-primary;
+$primary-color-light: lighten($primary-color, 15%);
+$primary-color-dark: darken($primary-color, 15%);
+
+$secondary-color: $brand-primary2;
+$success-color: $brand-success;
+$error-color: $brand-danger;
+$link-color: $link-color;
+
+$input-height: 2.2rem;
+$input-border-color: $gray;
+$input-border: 1px solid $input-border-color !default;
+$input-background: rgba(255,255,255,0.125);
+$input-font-size: 14px;
+$label-font-size: 0.7rem;

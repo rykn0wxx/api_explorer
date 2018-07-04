@@ -1,0 +1,20 @@
+.rykn0wxx {
+  .authentication {
+    margin-top: 20px;
+    .card-login {
+      display: flex;
+      .card-content {
+        flex: 1;
+      }
+    }
+    .input-field {
+      .hint {
+        position: relative;
+        min-height: 18px;
+        display: block;
+        font-size: 12px;
+        color: rgba(0,0,0,0.54);
+      }
+    }
+  }
+}

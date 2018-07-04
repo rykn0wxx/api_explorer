@@ -1,7 +1,9 @@
 .rykn0wxx {
   body {
+    background: $body-bg;
     text-shadow: none !important;
     line-height: 1.4;
+    font-family: Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     &.fixed-top-navbar {
       min-height: 75rem;
       padding-top: 4.5rem;
@@ -19,6 +21,28 @@
       &:focus {
         outline: none;
       }
+    }
+    .button_to {
+      transition: background-color .3s;
+    	color: #fff;
+    	display: block;
+    	padding: 0 15px;
+    	cursor: pointer;
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+    }
+    .act-as-link {
+      font-size: 1rem;
+      border: none;
+      box-shadow: none;
+    	background-color: transparent;
+      color: inherit;
+    	cursor: pointer;
+    	transition: background-color .2s;
+      display: inline-block;
+    	position: relative;
+    	vertical-align: middle;
     }
   }
 }

@@ -1,0 +1,21 @@
+<% title "Log in" %>
+
+<div class="row authentication">
+  <div class="col s8 offset-s2">
+    <div class="card card-login">
+      <div class="card-content">
+        <span class="card-title">Log In</span>
+        <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), :html => { :class => "form-horizontal mud-form" }) do |f| %>
+          <%= f.error_notification %>
+          <%= f.input :login, required: true, autofocus: true %>
+          <%= f.input :password, required: true %>
+          <div>
+            <%= link_to "New User", edit_user_registration_path(resource_name), :class => "btn-flat" %>
+            <%= link_to "New User", new_user_registration_path, :class => "btn-flat" %>
+            <%= f.button :submit, "Log in", :class => "btn right" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

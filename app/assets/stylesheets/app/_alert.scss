@@ -1,0 +1,49 @@
+.rykn0wxx {
+  .alert {
+    height: auto;
+    margin: 0px;
+    border: 0;
+    border-radius: 0;
+    padding: 0px;
+    z-index: 10000000;
+    position: absolute;
+    top: 36px;
+    left: 300px;
+    width: calc(100% - 300px);
+    background-color: rgba(135,215,211,0.85);
+  }
+  .alert-body {
+    padding: 15px;
+  	letter-spacing: 1px;
+  	color: $text-color;
+  	box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  .slide-in-down {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: slide-in-down;
+  }
+  .slide-out-up {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: slide-out-up;
+  }
+}
+@keyframes slide-out-up {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    visibility: hidden;
+    transform: translate3d(0, -180%, 0);
+  }
+}
+@keyframes slide-in-down {
+  0% {
+    transform: translateY(-100%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

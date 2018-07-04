@@ -230,7 +230,7 @@
 		this.el.appendChild(segPieces);
 	};
 
-	function _init () {
+	function _materializing () {
 		var s_nav = $('.sidenav');
 		if (s_nav.length !== 0) {
 			if (typeof s_nav[0].M_Sidenav !== 'object') {
@@ -258,12 +258,19 @@
 				alignment: 'right',
 				constrainWidth: false,
 				coverTrigger: false,
-				closeOnClick: false,
-				onCloseEnd: function (d) {
-					console.log(d);
-				}
+				closeOnClick: false
 			});
 		}
+		$('.tooltipped').tooltip();
+	};
+
+	function _init () {
+		_materializing();
+		setTimeout(function() {
+			$('.flash-alert')
+				.removeClass('slide-in-down')
+				.addClass('slide-out-up');
+		}, 4500);
 	};
 
 	var mudhead = {};

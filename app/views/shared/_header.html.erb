@@ -17,6 +17,13 @@
               <li class="hide-on-med-and-down"><a href="#">CC</a></li>
             </ul>
           </li>
+          <% if user_signed_in? %>
+            <li>
+              <%= button_to destroy_user_session_path, :class => "act-as-link tooltipped", :method => :delete, :data => {position: "bottom", tooltip: "Logout"} do %>
+                <%= mi.assignment_ind %>
+              <% end %>
+            </li>
+					<% end %>
         </ul>
         <a href="#!" data-target="sidenav-left" class="sidenav-trigger left">
           <%= mi.menu.css_class("black-text") %>
@@ -26,7 +33,7 @@
   </div>
   <ul id="sidenav-left" class="sidenav sidenav-fixed">
     <li>
-      <%= link_to root_path, :class => "logo-container" do %>
+      <%= link_to admin_root_path, :class => "logo-container" do %>
         Admin <%= mi.spa %>
       <% end %>
     </li>
@@ -47,4 +54,5 @@
       </ul>
     </li>
   </ul>
+  <%= render "shared/alert" %>
 </header>
