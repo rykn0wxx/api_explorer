@@ -1,3 +1,9 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  namespace :admin do
+    resources :dim_regions
+    resources :dim_timezones
+    root :to => 'dim_regions#index'
+  end
+  get 'index' => 'explorer#index', :as => 'index'
+  root :to => 'explorer#index'
 end
