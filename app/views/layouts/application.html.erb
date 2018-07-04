@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" class="rykn0wxx">
+	<head>
+		<meta charset="UTF-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="author" content="rykn0wxx"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"/>
+		<title>
+			<%= content_for?(:title) ? yield(:title) + " | rykn0wxx" : "rykn0wxx" %>
+		</title>
+		<%= tag :meta, name: 'turbolinks-root', content: '/' %>
+		<%= tag :meta, name: 'turbolinks-cache-control', content: 'no-preview' %>
+		<%= csrf_meta_tags %>
+		<%= csp_meta_tag %>
+
+		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+	</head>
+
+	<body class="has-fixed-sidenav">
+
+		<%= render "shared/header" %>
+
+		<main role="main">
+			<div class="container">
+				<%= yield %>
+			</div>
+		</main>
+
+		<%= render "shared/script_js" %>
+	</body>
+</html>

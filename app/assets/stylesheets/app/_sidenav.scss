@@ -1,0 +1,125 @@
+.rykn0wxx {
+  .sidenav {
+    background-color: $sb-bg;
+    color: $navbar-color;
+    box-shadow: none;
+    > li {
+      width: 100%;
+    }
+    .logo-container {
+      background-color: $logo-bg;
+      color: $logo-color;
+      padding: 0 16px;
+      height: 64px;
+      line-height: 64px;
+      font-size: 24px;
+      border-bottom: 1px solid rgba(0,0,0,0.2);
+      box-sizing: content-box;
+      .material-icons {
+        line-height: inherit;
+      }
+    }
+    &.sidenav-fixed {
+      left: 0;
+    }
+    .collapsible {
+      border-bottom: 1px solid rgba(0,0,0,0.2);
+      > .active {
+        .collapsible-header {
+          .chevron {
+            transform: rotate(-90deg);
+          }
+        }
+      }
+      > li {
+        border-bottom: 1px solid rgba(0,0,0,0.2);
+        transition: background-color .2s;
+        &:hover {
+          background-color: rgba(0,0,0,0.05);
+        }
+        &.waves-effect {
+          display: block;
+        }
+        > a {
+          &.collapsible-header {
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+          }
+        }
+        &.active {
+          > a {
+            &.collapsible-header {
+              border-top: 1px solid rgba(0, 0, 0, 0.1);
+              box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+              background-color: $sb-bg-active;
+              border-bottom: 1px solid rgba(0,0,0,0.2);
+            }
+          }
+        }
+      }
+      .collapsible-body {
+        padding-bottom: 16px;
+        background-color: $sb-body-bg;
+        li {
+          > a {
+            color: $sb-body-color;
+            padding: 0 16px;
+            transition: background-color .2s ease-out;
+            &:hover, &.active {
+              background-color: rgba(0,0,0,0.07);
+            }
+            > i.material-icons {
+              margin-right: 16px;
+            }
+          }
+        }
+      }
+    }
+    li {
+    	&.active, &:hover {
+    		> a {
+    			&::before {
+    				transform: scaleY(1);
+    			}
+    		}
+    	}
+    	& >a {
+        color: #fafafa;
+        position: relative;
+        padding: 0 16px;
+    		&.active, &:hover {
+    			&::before {
+    				transform: scaleY(1);
+    			}
+    		}
+        &::before {
+          left: auto;
+          right: 0;
+        }
+        > i.material-icons {
+          color: #ecf0f1;
+        }
+    	}
+    }
+  }
+  .has-fixed-sidenav {
+    @media only screen and (min-width: 993px) {
+      .navbar-fixed {
+        nav.navbar {
+          width: calc(100% - 300px);
+          left: 300px;
+        }
+      }
+    }
+  }
+  .navbar-fixed {
+    nav {
+      &.navbar {
+        background-color: $navbar-bg;
+        color: $navbar-color;
+        width: 100%;
+        left: 0;
+      }
+    }
+  }
+}

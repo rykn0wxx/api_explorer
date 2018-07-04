@@ -1,0 +1,36 @@
+//== Colors
+$gray-base:              #222426 !default;
+$gray-darker:            #36393D !default;
+$gray-dark:              #555A60 !default;
+$gray:                   #8B9298 !default;
+$gray-light:             #C5C8CB !default;
+$gray-lighter:           #E8E9EA !default;
+
+$brand-primary:         #636A6F !default;;
+$brand-success:         #41AB5D !default;
+$brand-info:            #377EB8 !default;
+$brand-warning:         #FDB462 !default;
+$brand-danger:          #EF3B2C !default;
+
+$brand-primary2:        #607d8b !default;
+$brand-success2:        #1de9b6 !default;
+$brand-warning2:        #ff9800 !default;
+$brand-danger2:         #ef5350 !default;
+$brand-info2:           #55acee !default;
+
+$body-bg:               #F7F7F7 !default;
+$text-color:            #272B30 !default;
+$body-color:            $text-color !default;
+
+$link-color:            #446E9B !default;
+$link-hover-decoration: none !default;
+
+$logo-bg:              #374850;
+$logo-color:           #666666;
+$navbar-bg:            #3C8DBC;
+$navbar-color:         #FAFAFA;
+$sb-bg:                #222d32;
+$sb-bg-active:         #1e282c;
+$sb-body-bg:           #2c3b41;
+$sb-body-color:        #8aa4af;
+$sb-body-active:       #fafafa;

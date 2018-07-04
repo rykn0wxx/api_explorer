@@ -1,0 +1,24 @@
+.rykn0wxx {
+  body {
+    text-shadow: none !important;
+    line-height: 1.4;
+    &.fixed-top-navbar {
+      min-height: 75rem;
+      padding-top: 4.5rem;
+    }
+
+    @media only screen and (min-width: 993px) {
+      &.has-fixed-sidenav {
+        padding-left: 300px;
+      }
+      .container {
+        width: 80%;
+      }
+    }
+    a {
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

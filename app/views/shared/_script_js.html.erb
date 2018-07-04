@@ -1,0 +1,5 @@
+<% content_for(:javascript) do %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-suppress-warning':'true' %>
+<% end %>
+
+<%= yield :javascript %>
